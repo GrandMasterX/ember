@@ -4,5 +4,5 @@ Emberprod.Track = DS.Model.extend({
   file: DS.attr('string'),
   cover: DS.attr('string'),
   album_id: DS.attr('number'),
-  //releaseDate: DS.attr('timestamp')
+  releaseDate: DS.attr('date')
 });
