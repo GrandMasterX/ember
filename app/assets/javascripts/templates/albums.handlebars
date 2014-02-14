@@ -1,0 +1,11 @@
+<h1>Albums</h1>
+
+<ul>
+  {{#each controller}}
+    <li>{{#linkTo "album" this}}{{title}}{{/linkTo}}</li>
+  {{else}}
+    <li>There are no albums.</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
