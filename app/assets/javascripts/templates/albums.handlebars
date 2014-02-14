@@ -2,7 +2,7 @@
 
 <ul>
   {{#each controller}}
-    <li>{{#linkTo "album" this}}{{title}}{{/linkTo}}</li>
+    <li>{{#link-to "album" this}}{{title}}{{/link-to}}</li>
   {{else}}
     <li>There are no albums.</li>
   {{/each}}

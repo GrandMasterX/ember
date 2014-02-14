@@ -2,7 +2,7 @@
 
 <ul>
   {{#each controller}}
-    <li>{{#linkTo "post" this}}{{title}}{{/linkTo}}</li>
+    <li>{{#link-to "post" this}}{{title}}{{/link-to}}</li>
   {{else}}
     <li>There are no posts.</li>
   {{/each}}

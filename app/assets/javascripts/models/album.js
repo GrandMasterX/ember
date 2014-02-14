@@ -3,5 +3,5 @@ Emberprod.Album = DS.Model.extend({
   genre: DS.attr('string'),
   cover: DS.attr('string'),
   user_id: DS.attr('number'),
-  releaseDate: DS.attr('timestamp')
+  //releaseDate: DS.attr('timestamp')
 });
