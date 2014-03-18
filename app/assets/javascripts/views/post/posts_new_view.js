@@ -1,3 +1,35 @@
 Emberprod.PostsNewView = Ember.View.extend({
-  templateName: 'post/new'
+  tagName:      'form',
+  templateName: 'post/new',
+
+  init: function() {
+    this._super();
+    this.set("contact", Emberprod.Post.create());
+  },
+
+  didInsertElement: function() {
+    this._super();
+    this.$('input:first').focus();
+  },
+
+  cancelForm: function() {
+    this.get("parentView").hideNew();
+  },
+
+  submit: function(event) {
+    var self = this;
+    var contact = this.get("contact");
+
+    event.preventDefault();
+
+    contact.saveResource()
+      .fail( function(e) {
+        App.displayError(e);
+      })
+      .done(function() {
+        App.contactsController.pushObject(contact);
+        self.get("parentView").hideNew();
+      });
+  }
+
 });
