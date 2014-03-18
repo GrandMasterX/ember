@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="span4">
+    <ul class="breadcrumb">
+    <li><a href="#">Posts</a> <span class="divider"></span></li>
+  </ul>
+
+  <ul>
+    {{#each controller}}
+      <li>{{#link-to "posts.show" this}}{{title}}{{/link-to}}</li>
+    {{else}}
+      <li>There are no posts.</li>
+    {{/each}}
+  </ul>
+
+  </div>
+  <div class="span2">
+    <div class="container">
+      {{outlet}}
+    </div>
+  </div>
+</div>
+
+
+

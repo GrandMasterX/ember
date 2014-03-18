@@ -1,0 +1,17 @@
+<h1>Create {{title}}</h1>
+<form>
+  <fieldset>
+    <div>
+      <label {{bindAttr for="titleField.elementId"}}>title</label>
+      {{view Ember.TextField valueBinding='title' name='title' viewName='titleField'}}
+    </div>
+    <div>
+      <label {{bindAttr for='bodyField.elementId'}}>Quote</label>
+      {{view Ember.TextArea valueBinding='body' name='body' viewName='bodyField'}}
+    </div>
+    <a href='#' {{action 'save'}} class='btn btn-success'>Create</a>
+  </fieldset>
+</form>
+<div class='page-header'></div>
+
+<a href='#' {{action cancel}} class='btn btn-inverse'>Cancel</a>

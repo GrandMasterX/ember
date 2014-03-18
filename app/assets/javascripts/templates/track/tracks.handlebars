@@ -3,6 +3,7 @@
 <ul>
   {{#each controller}}
     <li>{{#link-to "track" this}}{{title}}{{/link-to}}</li>
+    <li>{{#link-to "edit" this}}{{title}}{{/link-to}}</li>
   {{else}}
     <li>There are no tracks.</li>
   {{/each}}

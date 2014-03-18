@@ -1,3 +1,3 @@
 Emberprod.PostView = Ember.View.extend({
-  templateName: 'post'
+  templateName: 'post/post_view'
 });

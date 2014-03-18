@@ -1,3 +1,3 @@
 Emberprod.AlbumsView = Ember.View.extend({
-  templateName: 'albums'
+  templateName: 'album/albums'
 });

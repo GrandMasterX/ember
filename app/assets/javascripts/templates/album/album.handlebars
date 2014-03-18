@@ -1,0 +1,20 @@
+<article id="{{album.id}}" class="widget-ourWork widget-content widget-projection-widget widget">
+  <article class="content-item music-video">
+    <header>
+    </header>
+    <div class="page-header">
+        <h1>{{album.title}}</h1>
+    </div>
+    <div class="post-description">
+      <p></p>
+          <p>
+            {{#if album.image}}
+              <img width="150" height="120" alt="" src="{{album.image}}">
+            {{else}}
+              <img width="150" height="120" alt="<>" src="/uploads/pig.png">
+            {{/if}}
+          </p>
+      <p></p>
+    </div>
+  </article>
+</article>

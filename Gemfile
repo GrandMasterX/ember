@@ -16,6 +16,7 @@ gem 'mini_magick'
 gem 'devise'
 gem 'sqlite3'
 gem 'active_model_serializers'
+gem "twitter-bootstrap-rails", "~> 2.2.8"
 
 group :doc do
   gem 'sdoc', require: false

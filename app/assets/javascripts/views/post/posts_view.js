@@ -1,3 +1,3 @@
 Emberprod.PostsView = Ember.View.extend({
-  templateName: 'posts'
+  templateName: 'post/list'
 });

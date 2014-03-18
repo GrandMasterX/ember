@@ -1,0 +1,37 @@
+<h1>Albums</h1>
+
+<ul>
+  {{#each controller}}
+	<article id="{{id}}" class="widget-ourWork widget-content widget-projection-widget widget">
+	  <article class="content-item music-video">
+	    <header>
+	    </header>
+	    <div class="page-header">
+	        <h1>{{#link-to "album" this}}{{title}}{{/link-to}}</h1>
+	        <h1>{{#link-to "albums.new" this}}create new {{/link-to}}</h1>
+	    </div>
+	    <div class="post-description">
+	    	{{#link-to "edit" this}}{{title}}{{/link-to}}
+	          <p>
+	            </p>
+	              <p>
+	              {{#if image}}
+	                <img width="150" height="120" alt="" src="{{image}}">
+	              {{else}}
+	                <img width="150" height="120" alt="<>" src="/uploads/pig.png">
+	              {{/if}}
+	              </p>
+	            <p>
+	          </p>
+	        </a>
+	    </div>
+	  </article>
+	</article>
+  {{else}}
+    <li>There are no albums.</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
+
+

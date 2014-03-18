@@ -1,15 +1,12 @@
-<header id="header">
-  <h2>{{#link-to "index"}}Home{{/link-to}}</h2>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li>{{#link-to "index"}}Home{{/link-to}}</li>
+    <li>{{#link-to "posts"}}Posts{{/link-to}}</li>
+    <li>{{#link-to "albums"}}Albums{{/link-to}}</li>
+    <li>{{#link-to "tracks"}}Tracks{{/link-to}}</li>
+  </ul>
 
-  <nav>
-    <ul>
-      <li>{{#link-to "posts"}}Posts{{/link-to}}</li>
-      <li>{{#link-to "albums"}}Albums{{/link-to}}</li>
-      <li>{{#link-to "tracks"}}Tracks{{/link-to}}</li>
-    </ul>
-  </nav>
-</header>
-
-<div id="content">
-  {{outlet}}
+  <div class="container">
+    {{outlet}}
+  </div>
 </div>

@@ -1,3 +1,3 @@
 Emberprod.TrackView = Ember.View.extend({
-  templateName: 'track'
+  templateName: 'track/track'
 });
