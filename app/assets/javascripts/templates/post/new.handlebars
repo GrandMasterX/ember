@@ -9,9 +9,9 @@
       <label {{bindAttr for='bodyField.elementId'}}>Quote</label>
       {{view Ember.TextArea valueBinding='body' name='body' viewName='bodyField'}}
     </div>
-    <a href='#' {{action 'save'}} class='btn btn-success'>Create</a>
+    <a href='#' {{action 'save' target="view"}} class='btn btn-success'>Create</a>
   </fieldset>
 </form>
 <div class='page-header'></div>
 
-<a href='#' {{action cancel}} class='btn btn-inverse'>Cancel</a>
+<a href='#' {{action 'cancel' target="view"}} class='btn btn-inverse'>Cancel</a>

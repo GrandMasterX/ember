@@ -1,27 +1,23 @@
 <div class="row">
   <div class="span4">
-    <ul class="breadcrumb">
-    <li><a href="#">Posts</a> <span class="divider"></span></li>
-  </ul>
-
-  {{#each controller}}
-    {{view Emberprod.PostsShowView contactBinding="this"}}
-  {{else}}
-    <li>There are no posts.</li>
-  {{/each}}
-  {{#if isNewVisible}}
-    <tr>
-      <td>*</td>
-      <td>
-        {{view Emberprod.NewContactView}}
-      </td>
-    </tr>
+    {{#each controller}}
+      {{view Emberprod.PostsShowView postsBinding="this"}}
+    {{else}}
+      <li>There are no posts.</li>
+    {{/each}}
+  </div>
+  {{#if view.isNewVisible}}
+    <div class="span4">
+      <tr>
+        <td>*</td>
+        <td>
+          {{view Emberprod.PostsNewView}}
+        </td>
+      </tr>
+    </div>
   {{/if}}
   <div class="commands">
-  <a href="#" {{action "showNew"}}>New Contact</a>
-  <a href="#" {{action "refreshListing"}}>Refresh Listing</a>
+    <a href="#" {{action "showNew" target="view"}}>New Contact</a>
+    <a href="#" {{action "refreshListing" target="view"}}>Refresh Listing</a>
+  </div>
 </div>
-</div>
-
-
-

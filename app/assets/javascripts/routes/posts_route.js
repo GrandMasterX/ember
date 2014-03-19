@@ -29,6 +29,9 @@ Emberprod.PostsNewRoute = Ember.Route.extend({
   model: function() {
     return Emberprod.Post.createRecord();
   },
+  setupController: function(controller, model){
+    controller.set('content', model)
+  },
 
   actions: {
     cancel: function() {
